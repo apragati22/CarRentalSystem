@@ -10,6 +10,7 @@ OR
 write the following command on the terminal 
 
 g++ -o main.exe CarRentalSystem.cpp cars.cpp users.cpp functions.cpp
+
 ./main.exe
 
 
