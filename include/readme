@@ -1,1 +1,2 @@
-Contains the database .txt files to be included in the program.
+Contains the .hpp files to be included in the program.
+These .hpp files contain the declarations of all classes and their attributes and methods used in the program.
