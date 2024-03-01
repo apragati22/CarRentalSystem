@@ -1,0 +1,5 @@
+Contains the c++ code for the program.
+CarRentalSystem.cpp  contains the main code and calls functions from other files
+users.cpp  contains the functions related to users (customers, employees and managers) and users' database management
+cars.cpp  contains the functions related to cars and cars' database management
+functions.cpp  contains some frequently used functions across different files
