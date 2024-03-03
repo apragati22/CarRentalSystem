@@ -158,7 +158,7 @@ void CarsDb::Add_car(){
     getline(cin,ModelName);
 
     cout<<"Please enter its company"<<endl;
-    cin.ignore();
+    // cin.ignore();
     getline(cin,company);
     cout<<"Please enter its current condition on a scale of 1(Poor) to 5(Excellent)"<<endl;
     cin>>curr_cond;
