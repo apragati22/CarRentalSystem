@@ -113,13 +113,14 @@ Cars* CarsDb::Find_car(string CarNumber){
 void CarsDb::available_cars(){
     cout<<endl;
     cout<<"Cars available on rent are:"<<endl;
-    cout<<"---------------------------------------------------------------------------------------------------------------------"<<endl;
-    cout<<"Model Name\t||\tCompany \t||\tCar Number\t||\tCondition\t||\tRent/day (in $)"<<endl;
-    cout<<"---------------------------------------------------------------------------------------------------------------------"<<endl;
+    cout<<"----------------------------------------------------------------------------------------------------------------------"<<endl;
+    cout<<"Model Name\t||\tCompany \t||\tCar Number\t||\t Condition  \t||\tRent/day (in $)"<<endl;
+    cout<<"-----------------------------------------------------------------------------------------------------------------------"<<endl;
     int count=0;
     for(auto car:list_of_cars){
         if(car.onRent=="No"){
-            cout<<setfill(' ')<<setw(20)<<left<<car.ModelName<<"\t"<<setfill(' ')<<setw(15)<<left<<car.Company<<"\t\t"<<setw(10)<<left<<car.CarNumber<<"\t\t   "<<car.current_condition<<"\t\t\t   "<<car.rent<<endl;
+            // cout<<setfill(' ')<<setw(20)<<left<<car.ModelName<<"\t"<<setfill(' ')<<setw(15)<<left<<car.Company<<"\t\t"<<setw(10)<<left<<car.CarNumber<<"\t\t   "<<left<<car.current_condition<<"\t\t\t   "<<left<<car.rent<<endl;
+            cout<<setfill(' ')<<setw(20)<<left<<car.ModelName<<"\t"<<setfill(' ')<<setw(15)<<left<<car.Company<<"\t\t"<<setw(10)<<left<<car.CarNumber<<"\t\t    "<<left<<car.current_condition<<"\t\t\t   "<<left<<car.rent<<endl;
         }
         count++;
     }
@@ -153,7 +154,8 @@ void CarsDb::Add_car(){
         cin>>CarNumber;
     }
     cout<<"Please enter the model name of the car"<<endl;
-    cin>>ModelName;
+    cin.ignore();
+    getline(cin,ModelName);
 
     cout<<"Please enter its company"<<endl;
     cin>>company;
